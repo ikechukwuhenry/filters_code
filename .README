@@ -1,0 +1,3 @@
+We already know that a digital image is obtained by sampling and quantizing the continuous signal. 
+Thus if we were to interpolate a pixel value, 
+more chances are that it resembles that of the neighborhood pixels and less on the distant pixels.

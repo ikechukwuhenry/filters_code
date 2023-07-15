@@ -10,13 +10,15 @@ lapofg = signal.convolve2d(laplacian, gauss)
 print(lapofg)
 
 img_filename = os.path.join(os.getcwd(), 'Koala-min.jpg')
-# image = cv2.imread(img_filename) 
-# image = cv2.cvtColor(src=image, code=cv2.COLOR_BGR2GRAY)
-# output = signal.convolve2d(image, lapofg)
-# cv2.imshow('test', output)
-# cv2.waitKey(0)
 from convolution import convolve2D, processImage
 
 new_img = processImage(img_filename)
 output = convolve2D(image=new_img, kernel=lapofg)
 cv2.imwrite('log.jpg', output)
+
+'''
+We already know that a digital image is obtained by sampling and quantizing 
+the continuous signal. 
+Thus if we were to interpolate a pixel value, more chances are that it resembles 
+that of the neighborhood pixels and less on the distant pixels.
+'''
